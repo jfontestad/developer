@@ -1,0 +1,14 @@
+<aura:component controller="CallTableauSyncAPI" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <div>
+        <br/>        
+        <p>
+                    Click on Import to start Metadata Sync for Tablueau Server
+        </p>
+  
+    </div>
+   
+    
+    <div class="slds-align_absolute-center" style="height:10rem">
+        <lightning:button variant="Brand" label="Import" title="Import Data"  onclick="{! c.Import_Tableau_MD }"/>
+    </div>
+</aura:component>

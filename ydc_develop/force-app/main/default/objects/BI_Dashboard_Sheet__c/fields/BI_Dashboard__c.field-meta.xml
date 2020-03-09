@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Dashboard__c</fullName>
+    <externalId>false</externalId>
+    <label>BI Dashboard</label>
+    <referenceTo>BI_Dashboard__c</referenceTo>
+    <relationshipLabel>Sheets</relationshipLabel>
+    <relationshipName>BI_Dashboard_Sheets</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

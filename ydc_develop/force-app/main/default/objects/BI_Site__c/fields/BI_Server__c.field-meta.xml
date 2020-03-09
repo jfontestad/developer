@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BI_Server__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>This is the server that holds the Tableau artifacts</inlineHelpText>
+    <label>BI Server</label>
+    <referenceTo>BI__c</referenceTo>
+    <relationshipLabel>BI Sites</relationshipLabel>
+    <relationshipName>BI_Sites</relationshipName>
+    <required>true</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
