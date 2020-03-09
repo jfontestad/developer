@@ -3,23 +3,39 @@
     <label><!-- Frequency --></label>
     <name>Frequency__c</name>
     <picklistValues>
-        <masterLabel>Annually</masterLabel>
-        <translation><!-- Annually --></translation>
-    </picklistValues>
-    <picklistValues>
         <masterLabel>Daily</masterLabel>
         <translation><!-- Daily --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Event Driven</masterLabel>
+        <translation><!-- Event Driven --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hourly</masterLabel>
+        <translation><!-- Hourly --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Monthly</masterLabel>
         <translation><!-- Monthly --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>On Demand</masterLabel>
-        <translation><!-- On Demand --></translation>
+        <masterLabel>Not Applicable</masterLabel>
+        <translation><!-- Not Applicable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Quarterly</masterLabel>
+        <translation><!-- Quarterly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Real-time</masterLabel>
+        <translation><!-- Real-time --></translation>
     </picklistValues>
     <picklistValues>
         <masterLabel>Weekly</masterLabel>
         <translation><!-- Weekly --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Yearly</masterLabel>
+        <translation><!-- Yearly --></translation>
     </picklistValues>
 </CustomFieldTranslation>

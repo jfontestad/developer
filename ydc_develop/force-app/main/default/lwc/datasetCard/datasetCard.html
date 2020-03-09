@@ -1,0 +1,52 @@
+<template>
+    <lightning-card icon-name="standard:apex_plugin">
+        <template if:true={dataset.data}>
+            <span slot="title">{dataset.data.fields.Name.value}</span>
+            <lightning-button-icon
+                icon-name="utility:expand_alt"
+                slot="actions"
+                onclick={handleNavigateToRecord}
+            ></lightning-button-icon>
+            <div class = "scrollCard">
+            <div class="slds-m-horizontal_medium">
+                 <img
+                    src={dataset.data.fields.Picture_URL__c.value}
+                    class="dataset"
+                    alt="Dataset picture"
+                /> 
+                  <div class="row">
+                    <div>Description:</div>
+                    <div>{dataset.data.fields.Description__c.value}</div>
+                 </div>
+                 <div class="row">
+                    <div>Frequency:</div>
+                    <div>{dataset.data.fields.Frequency__c.value}</div>
+                 </div>
+                 <div class="row">
+                    <div>Regions:</div>
+                    <div>{dataset.data.fields.Regions__c.value}</div>
+                 </div> 
+                 <div class="row">
+                    <div>Status:</div>
+                    <div>{dataset.data.fields.Status__c.value}</div>
+                 </div>
+            
+            </div>
+            </div>
+        </template>
+
+        <!-- <template if:true={noData}>
+            <c-placeholder
+                message="Select a dataset to see details"
+            ></c-placeholder>
+        </template> -->
+        <template if:true={noData}>
+        <div class="slds-p-around_large defaultMessage">  
+            <p class="slds-p-around_small">Select a dataset to see details</p>
+        </div>
+    </template>
+        <template if:true={dataset.error}>
+            <c-inline-message errors={dataset.error}></c-inline-message>
+        </template>
+    </lightning-card>
+</template>

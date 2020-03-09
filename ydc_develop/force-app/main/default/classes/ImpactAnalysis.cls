@@ -12,13 +12,13 @@ class ImpactAnalysis {
 		switch on sObjectType{
 		when 'Column__c','ydc__Column__c'{
 
-			Column__c columnData = [SELECT Id, Name,Table__r.Name, (SELECT Id, Name,Bi_Field__r.Name,Bi_Field__r.Id FROM BI_Field_Column__r) FROM Column__c WHERE Id =: recordId];
+			Column__c columnData = [SELECT Id, Name,Table__r.Name, (SELECT Id, Name,Bi_Field__r.Name,Bi_Field__r.Id FROM BI_Field_Column__r) FROM Column__c WHERE Id =: recordId LIMIT 25];
 			//Create a columnrecord
-			ParentData columnRecord = new ParentData(columnData.Name,null,impact.reportUrl(recordId,'Column__c'),'Column','Related to');
+			ParentData columnRecord = new ParentData(columnData.Name,null,impact.reportUrl(recordId,'Column__c'),'Column','Related to',recordId);
 			//Loop on BiField_Column
 			for(BIField_Column__c columnFieldData: columnData.BI_Field_Column__r) {
 
-				columnRecord.children.add(new ChildData(columnFieldData.BI_Field__r.Name,'Top Level',impact.reportUrl(columnFieldData.BI_Field__r.Id,'BIField__c'),'BIField','Related to'));
+				columnRecord.children.add(new ChildData(columnFieldData.BI_Field__r.Name,'Top Level',impact.reportUrl(columnFieldData.BI_Field__r.Id,'BIField__c'),'BIField','Related to',columnFieldData.BI_Field__r.id));
 
 			}
 

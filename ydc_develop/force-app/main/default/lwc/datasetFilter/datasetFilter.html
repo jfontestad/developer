@@ -1,0 +1,61 @@
+<template>
+    <lightning-card title="Filters" icon-name="standard:calibration">
+        <div class = "scrollFilter">
+        <div class="slds-m-horizontal_medium">
+            <lightning-input
+                label="Search Key"
+                type="search"
+                onchange={handleSearchKeyChange}
+            ></lightning-input>
+            <section>
+                <h1>Regions</h1>
+                <template if:true={regions.data}>
+                    <template
+                        for:each={regions.data.values}
+                        for:item="region"
+                    >
+                        <lightning-input
+                            key={region.value}
+                            label={region.label}
+                            data-filter="regions"
+                            data-value={region.value}
+                            type="checkbox"
+                            onchange={handleCheckboxChange}
+                        ></lightning-input>
+                    </template>
+                </template>
+                <template if:true={regions.error}>
+                    <c-inline-message
+                        message="Error loading regions"
+                        errors={regions.error}
+                    ></c-inline-message>
+                </template>
+            </section>
+            <section>
+                <h1>Frequency</h1>
+                <template if:true={frequencies.data}>
+                    <template
+                        for:each={frequencies.data.values}
+                        for:item="frequency"
+                    >
+                        <lightning-input
+                            key={frequency.value}
+                            label={frequency.label}
+                            data-filter="frequencies"
+                            data-value={frequency.value}
+                            type="checkbox"
+                            onchange={handleDataTopicCheckboxChange}
+                        ></lightning-input>
+                    </template>
+                </template>
+                <template if:true={frequencies.error}>
+                    <c-inline-message
+                        message="Error loading data topics"
+                        errors={frequencies.error}
+                    ></c-inline-message>
+                </template>
+            </section>
+        </div>
+    </div>
+    </lightning-card>
+</template>

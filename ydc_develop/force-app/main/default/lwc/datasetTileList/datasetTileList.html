@@ -1,0 +1,46 @@
+<template>
+    <div class="slds-card slds-p-around_x-small">
+        <template if:true={searchBarIsVisible}>
+            <lightning-input
+                label="Search Key"
+                type="text"
+                onchange={handleSearchKeyChange}
+                class="search-bar"
+            ></lightning-input>
+        </template>
+        <template if:true={datasets.data}>
+            <template if:true={datasets.data.records.length}>
+                <div class="content">
+                    <template
+                        for:each={datasets.data.records}
+                        for:item="dataset"
+                    >
+                        <c-dataset-tile
+                            key={dataset.Id}
+                            sfdataset={dataset}
+                            draggable={tilesAreDraggable}
+                            onselected={handleDatasetSelected}
+                            class="slds-m-around_x-small"
+                        >
+                        </c-dataset-tile>
+                    </template>
+                </div>
+                <c-paginator
+                    page-number={pageNumber}
+                    page-size={datasets.data.pageSize}
+                    total-item-count={datasets.data.totalItemCount}
+                    onprevious={handlePreviousPage}
+                    onnext={handleNextPage}
+                ></c-paginator>
+            </template>
+            <template if:false={datasets.data.records.length}>
+                <c-placeholder
+                    message="There are no datasets matching your current selection"
+                ></c-placeholder>
+            </template>
+        </template>
+        <template if:true={datasets.error}>
+            <c-inline-message errors={datasets.error}></c-inline-message>
+        </template>
+    </div>
+</template>

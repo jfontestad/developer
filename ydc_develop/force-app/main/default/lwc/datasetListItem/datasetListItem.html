@@ -1,0 +1,31 @@
+<template>
+    <lightning-layout vertical-align="center">
+        <lightning-layout-item
+            ><img
+                src={dataset.Picture_URL__c}
+                class="dataset"
+                alt="Dataset picture"
+        /></lightning-layout-item>
+        <lightning-layout-item
+            flexibility="grow"
+            class="slds-p-horizontal_small"
+        >
+            <p>{dataset.Name}</p>
+            <!-- <p>
+                <lightning-formatted-number
+                    format-style="currency"
+                    currency-code="USD"
+                    value={product.MSRP__c}
+                    class="price"
+                    maximum-fraction-digits="0"
+                ></lightning-formatted-number>
+            </p> -->
+        </lightning-layout-item>
+        <lightning-layout-item
+            ><lightning-button
+                label="View Details"
+                onclick={handleViewDetailsClick}
+            ></lightning-button
+        ></lightning-layout-item>
+    </lightning-layout>
+</template>

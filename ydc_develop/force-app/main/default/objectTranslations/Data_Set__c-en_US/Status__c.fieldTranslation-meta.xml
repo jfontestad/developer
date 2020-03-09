@@ -3,23 +3,23 @@
     <label><!-- Status --></label>
     <name>Status__c</name>
     <picklistValues>
-        <masterLabel>Active</masterLabel>
-        <translation><!-- Active --></translation>
+        <masterLabel>Draft</masterLabel>
+        <translation><!-- Draft --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Deleted</masterLabel>
-        <translation><!-- Deleted --></translation>
+        <masterLabel>Fulfilled</masterLabel>
+        <translation><!-- Fulfilled --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Inactive</masterLabel>
-        <translation><!-- Inactive --></translation>
+        <masterLabel>Procuring</masterLabel>
+        <translation><!-- Procuring --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Obsolete</masterLabel>
-        <translation><!-- Obsolete --></translation>
+        <masterLabel>Rejected</masterLabel>
+        <translation><!-- Rejected --></translation>
     </picklistValues>
     <picklistValues>
-        <masterLabel>Pending Review</masterLabel>
-        <translation><!-- Pending Review --></translation>
+        <masterLabel>Submitted</masterLabel>
+        <translation><!-- Submitted --></translation>
     </picklistValues>
 </CustomFieldTranslation>

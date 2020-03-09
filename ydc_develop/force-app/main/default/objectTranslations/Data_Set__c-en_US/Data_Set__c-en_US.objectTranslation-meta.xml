@@ -27,4 +27,8 @@
         <name>Subscribe</name>
     </quickActions>
     <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Request_Data_Set --></label>
+        <name>Request_Data_Set</name>
+    </webLinks>
 </CustomObjectTranslation>

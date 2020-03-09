@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Informatica EDC - Amazon S3</masterLabel>
+        <translation><!-- Informatica EDC - Amazon S3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Informatica EDC - File System</masterLabel>
+        <translation><!-- Informatica EDC - File System --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Informatica EDC - HDFS</masterLabel>
+        <translation><!-- Informatica EDC - HDFS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

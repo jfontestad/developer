@@ -1,22 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    
     <types>
-        <members>*</members>
-        <name>ApexClass</name>
-    </types>
+	<members>ImpactAnalysis</members>
+	<members>Lineage</members>
+	<members>Traceability</members>
+	<members>ChildData</members>
+	<members>ParentData</members>
+	<members>MetadataSearchController</members>
+	<members>MetadataSearchResult</members>
+	<members>DataQualityRuleController</members>
+    <members>DataSetController</members>
+    <members>TestDataFactory</members>
+    <members>TestImpactAnalysis</members>
+    <members>TestLineage</members>
+    <members>TestTraceability</members>
+    <members>TableauAPI</members>
+	<members>TableauMetadataSync</members>
+    <members>TableauSyncAPI_Schedule</members>
+	<members>TableauSyncAPINew</members>
+	<members>TableauSyncAPISchedule</members>
+	<members>CallTableauSyncAPI</members>
+	<members>Workbook</members>
+	<members>Sheet</members>
+	<members>SheetField</members>
+	<members>Dashboard</members>
+    <members>DataMarketplaceController</members>
+	<members>DatasetRecordInfoController</members>
+	<members>PagedResult</members>
+    <members>Owner</members>
+    <members>Project</members>
+    <members>Site</members>
+	<name>ApexClass</name>
+	</types>
     <types>
         <members>Case.Data_Access_Request</members>
         <name>RecordType</name>
     </types>
-    <types>
-        <members>*</members>
-        <name>ApexComponent</name>
-    </types>
-    <types>
-        <members>*</members>
-        <name>ApexPage</name>
-    </types>
+    
     <types>
         <members>*</members>
         <name>ApexTestSuite</name>
@@ -29,8 +49,13 @@
         <members>*</members>
         <name>ApprovalProcess</name>
     </types>
-    <types>
-        <members>*</members>
+      <types>
+        <members>DataSetList</members>
+        <members>DataSetRecordViewForm</members>
+        <members>Import_Tableau_Metadata</members>
+        <members>Import_Tableau_Metadata_App</members>
+        <members>pageTemplate_2_7_3</members>
+
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -71,7 +96,11 @@
         <members>YDC_Emails/Case_Resolution_Rejection_Notification</members>
         <name>EmailTemplate</name>
     </types>
-    <types>
+   <types>
+		<members>File__c-File Layout</members>
+		<members>Folder__c-Folder Layout</members>
+		<members>Field__c-Field Layout</members>
+		<members>File_System__c-File System Layout</members>
         <members>BIField_Column__c-BI Field_Column Layout</members>
         <members>BIWorkbook_Table__c-BIWorkbook_Table Layout</members>
         <members>BI__c-BI Layout</members>
@@ -122,10 +151,7 @@
         <members>YDC_Reports/Terms_vs_Columns</members>
         <name>Report</name>
     </types>
-
-    
-	
-    <types>
+  <types>
         <members>YDC_Documents</members>
         <members>YDC_Documents/YDC_Case_Icon</members>
         <members>YDC_Documents/YDC_Community_Icon</members>
@@ -146,6 +172,10 @@
         <members>YDC_Documents/YDC_Schema_Icon</members>
         <members>YDC_Documents/YDC_Table_Icon</members>
         <members>YDC_Documents/YDC_Column_Icon</members>
+		<members>YDC_Documents/YDC_File</members>
+		<members>YDC_Documents/YDC_Folder</members>
+		<members>YDC_Documents/YDC_File_System</members>
+		
         <name>Document</name>
     </types>
 
@@ -163,7 +193,22 @@
     </types>
 
     <types>
-        <members>*</members>
+        <members>impactAnalysis</members>
+		<members>dataQualityRule</members>
+		<members>lineage</members>
+		<members>traceability</members>
+		<members>lookup</members>
+        <members>datasetCard</members>
+		<members>datasetFilter</members>
+		<members>datasetListItem</members>
+		<members>datasetTile</members>
+		<members>datasetTileList</members>
+		<members>inlineMessage</members>
+		<members>ldsUtils</members>
+		<members>paginator</members>
+		<members>placeholder</members>
+		<members>pubsub</members>
+		<members>similarDatasets</members>
         <name>LightningComponentBundle</name>
     </types>
     <types>
@@ -179,13 +224,11 @@
         <name>Queue</name>
     </types>
    
-    <types>
-        <members>*</members>
-        <name>FlexiPage</name>
-    </types>
+    
     <types>
         <members>Create_a_Data_Access_Request</members>
         <members>Data_Set__c.Subscribe</members>
+        <members>BI__c.Import_Metadata</members>
         <members>YDC_Create_a_Glossary</members>
         <members>YDC_Create_a_Term</members>
         <name>QuickAction</name>
@@ -223,10 +266,6 @@
     <types>
         <members>*</members>
         <name>WorkflowFieldUpdate</name>
-    </types>
-   
-  
-   
-    
+    </types> 
     <version>47.0</version>
 </Package>

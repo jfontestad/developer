@@ -6,6 +6,7 @@ public class TableauMetadataSync {
     private  String site;
     private String serverId;
     private TableauAPI tableauAPI;
+    public String luid;
     public TableauMetadataSync(String username,String password,string url,string site,String serverId){
         this.username=username;
         this.password=password;

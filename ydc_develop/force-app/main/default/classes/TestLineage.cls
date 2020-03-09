@@ -9,8 +9,15 @@ public class TestLineage {
 		Column__c col = TestDataFactory.createColumn(tbl, 'Column');
         BiProject__c p = TestDataFactory.createBiProject('Project');
 		BiWorkbook__c wb = TestDataFactory.createBiWorkbook(p, 'Workbook');
+		BiView__c v = TestDataFactory.createBiView(wb, 'View');
+		BiField__c f = TestDataFactory.createBiField(v, 'Field');
+        BiField_Column__c fc = TestDataFactory.createBiFieldColumn(col, f);
+        
         Test.startTest();
+    	String json = Lineage.getLineageData(f.Id);
         Test.stopTest();
+        
+        System.assert(json != null);
     }
     
     @isTest

@@ -4,15 +4,17 @@
     <externalId>false</externalId>
     <label>Frequency</label>
     <required>false</required>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
-    <type>Picklist</type>
+    <type>MultiselectPicklist</type>
     <valueSet>
+        <restricted>true</restricted>
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>On Demand</fullName>
+                <fullName>Hourly</fullName>
                 <default>false</default>
-                <label>On Demand</label>
+                <label>Hourly</label>
             </value>
             <value>
                 <fullName>Daily</fullName>
@@ -30,10 +32,31 @@
                 <label>Monthly</label>
             </value>
             <value>
-                <fullName>Annually</fullName>
+                <fullName>Quarterly</fullName>
                 <default>false</default>
-                <label>Annually</label>
+                <label>Quarterly</label>
+            </value>
+            <value>
+                <fullName>Yearly</fullName>
+                <default>false</default>
+                <label>Yearly</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>false</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>Real-time</fullName>
+                <default>false</default>
+                <label>Real-time</label>
+            </value>
+            <value>
+                <fullName>Event Driven</fullName>
+                <default>false</default>
+                <label>Event Driven</label>
             </value>
         </valueSetDefinition>
     </valueSet>
+    <visibleLines>4</visibleLines>
 </CustomField>

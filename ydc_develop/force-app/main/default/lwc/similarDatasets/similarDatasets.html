@@ -1,0 +1,30 @@
+<template>
+    <lightning-card title="Similar Datasets" icon-name="standard:link">
+        <div class="slds-m-horizontal_medium">
+            <template if:true={similarDatasets.data}>
+                <template if:true={similarDatasets.data}>
+                    <template
+                        for:each={similarDatasets.data}
+                        for:item="dataset"
+                    >
+                        <c-dataset-list-item
+                            key={dataset.Id}
+                            dataset={dataset}
+                        ></c-dataset-list-item>
+                    </template>
+                </template>
+                <template if:false={similarDatasets.data.length}>
+                    <c-placeholder
+                        message="No similar Datasets"
+                    ></c-placeholder>
+                </template>
+            </template>
+            <template if:true={errors}>
+                <c-inline-message
+                    message="An error has occurred while retrieving similar Datasets"
+                    errors={errors}
+                ></c-inline-message>
+            </template>
+        </div>
+    </lightning-card>
+</template>
